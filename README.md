@@ -2,7 +2,8 @@
 
 A modern, responsive search engine built with Go and powered by the Tavily AI API. This application features a beautiful dark/light theme UI, real-time search capabilities, and support for both text and image results.
 
-![Search Engine Demo](static/images/demo.png)
+![Screenshot 2025-06-26 at 2 48 58 AM](https://github.com/user-attachments/assets/14799535-7e29-49fc-9a2b-1108d5d6f6f3)
+
 
 ## Features
 
@@ -26,8 +27,8 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/go-search-engine.git
-cd go-search-engine
+git clone https://github.com/manas95826/init-go.git
+cd init-go
 ```
 
 2. Install dependencies:
@@ -152,10 +153,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Screenshots
 
 ### Dark Theme
-![Dark Theme](static/images/dark-theme.png)
+![Screenshot 2025-06-26 at 2 48 20 AM](https://github.com/user-attachments/assets/2a673b83-0944-40a4-a1c5-6bb1e6ec13fc)
+
 
 ### Light Theme
-![Light Theme](static/images/light-theme.png)
+![Screenshot 2025-06-26 at 2 49 25 AM](https://github.com/user-attachments/assets/4dc8da68-6bde-4ff7-a16a-12737240c256)
+
 
 ## Contact
 
