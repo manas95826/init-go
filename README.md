@@ -23,6 +23,15 @@ Before you begin, ensure you have the following installed:
 - Go 1.16 or higher
 - A Tavily API key (get one at [https://tavily.com](https://tavily.com))
 
+## Screenshots
+
+### Dark Theme
+![Screenshot 2025-06-26 at 2 48 20 AM](https://github.com/user-attachments/assets/2a673b83-0944-40a4-a1c5-6bb1e6ec13fc)
+
+
+### Light Theme
+![Screenshot 2025-06-26 at 2 49 25 AM](https://github.com/user-attachments/assets/4dc8da68-6bde-4ff7-a16a-12737240c256)
+
 ## Installation
 
 1. Clone the repository:
@@ -149,15 +158,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Tavily API](https://tavily.com) for the search capabilities
 - [Font Awesome](https://fontawesome.com) for the icons
 - Go community for the excellent standard library
-
-## Screenshots
-
-### Dark Theme
-![Screenshot 2025-06-26 at 2 48 20 AM](https://github.com/user-attachments/assets/2a673b83-0944-40a4-a1c5-6bb1e6ec13fc)
-
-
-### Light Theme
-![Screenshot 2025-06-26 at 2 49 25 AM](https://github.com/user-attachments/assets/4dc8da68-6bde-4ff7-a16a-12737240c256)
 
 
 ## Contact
