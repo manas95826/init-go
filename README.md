@@ -159,9 +159,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Font Awesome](https://fontawesome.com) for the icons
 - Go community for the excellent standard library
 
-
-## Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/go-search-engine](https://github.com/yourusername/go-search-engine) 
