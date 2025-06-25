@@ -3,14 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go API Frontend</title>
+    <title>Go Search Engine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+    <div class="theme-switch" title="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <div class="theme-switch-ring"></div>
+    </div>
     <div class="container">
-        <h1>Go API Frontend</h1>
-        <button onclick="fetchMessage()">Fetch Message from API</button>
-        <div id="result"></div>
+        <div class="search-container animate-fade-in">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                    <div class="logo-pulse"></div>
+                </div>
+                <h1>Go Search Engine</h1>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Ask me anything..." autocomplete="off">
+                <button id="searchButton">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="options animate-fade-in-up">
+                <div class="option-group">
+                    <label class="toggle">
+                        <input type="checkbox" id="includeAnswer" checked>
+                        <span class="toggle-slider">
+                            <span class="toggle-icon">
+                                <i class="fas fa-robot"></i>
+                            </span>
+                        </span>
+                        <span class="toggle-label">AI Answer</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="includeImages" checked>
+                        <span class="toggle-slider">
+                            <span class="toggle-icon">
+                                <i class="fas fa-image"></i>
+                            </span>
+                        </span>
+                        <span class="toggle-label">Include Images</span>
+                    </label>
+                </div>
+                <div class="option-group">
+                    <div class="select-wrapper">
+                        <select id="searchDepth" class="search-depth">
+                            <option value="basic">Basic Search</option>
+                            <option value="advanced">Advanced Search</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="maxResults" class="max-results">
+                            <option value="5">5 Results</option>
+                            <option value="10">10 Results</option>
+                            <option value="15">15 Results</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="loader" id="loader">
+            <div class="loader-content">
+                <div class="loader-spinner">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                </div>
+                <div class="loader-text">Searching across the web...</div>
+                <div class="loader-dots">
+                    <span>.</span><span>.</span><span>.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="filters animate-fade-in" id="filters">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-globe"></i>
+                All Results
+            </button>
+            <button class="filter-btn" data-filter="articles">
+                <i class="fas fa-newspaper"></i>
+                Articles
+            </button>
+            <button class="filter-btn" data-filter="images">
+                <i class="fas fa-images"></i>
+                Images
+            </button>
+        </div>
+
+        <div class="results animate-fade-in" id="results">
+            <div class="answer-container" id="answerContainer"></div>
+            <div class="images-container" id="imagesContainer">
+                <div class="images-grid" id="imagesGrid"></div>
+            </div>
+            <div class="sources-container" id="sourcesContainer"></div>
+        </div>
     </div>
     <script src="/static/js/app.js"></script>
 </body>
