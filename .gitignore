@@ -8,14 +8,14 @@
 # Test binary, built with `go test -c`
 *.test
 
-# Output of the go coverage tool
+# Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
 
-# Go workspace file
-go.work
+# Environment variables
+.env
 
 # IDE specific files
 .idea/
@@ -29,6 +29,5 @@ go.work
 ._*
 .Spotlight-V100
 .Trashes
-
-# Environment variables
-.env
+ehthumbs.db
+Thumbs.db

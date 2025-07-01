@@ -31,9 +31,19 @@ type SearchRequest struct {
 }
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
+	// Load .env file if it exists
+	_ = godotenv.Load() // Ignore error if .env doesn't exist
+
+	// Get port from environment variable or use default
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	// Get API key from environment variable
+	apiKey := os.Getenv("TAVILY_API_KEY")
+	if apiKey == "" {
+		log.Fatal("TAVILY_API_KEY environment variable is required")
 	}
 
 	// Serve static files
@@ -47,9 +57,8 @@ func main() {
 	// Handle search API requests
 	http.HandleFunc("/search", handleSearch)
 
-	port := ":8080"
-	fmt.Printf("Server is running on http://localhost%s\n", port)
-	log.Fatal(http.ListenAndServe(port, nil))
+	fmt.Printf("Server is running on port %s\n", port)
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
 
 func handleSearch(w http.ResponseWriter, r *http.Request) {
